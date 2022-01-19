@@ -18,7 +18,7 @@ export default function Thanks() {
           <div className='bg-redConsufarma p-3 h-3'>
           </div>
           <div className='bg-blueConsufarma p-3 text-white text-4xl font-extrabold'>
-            Jueves 27 de Enero 2021
+            Jueves 27 de Enero 2022
           </div>
           <div className='text-orangeCustom text-4xl font-extrabold my-4'>
             Horario

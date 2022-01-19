@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-grayCustom">
       <Head>
         <title>Reto Cromatografía</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -22,7 +22,7 @@ export default function Home() {
           <div className='bg-redConsufarma p-3 h-3'>
           </div>
           <div className='bg-blueConsufarma p-3 text-white text-4xl font-extrabold'>
-            Jueves 27 de Enero 2021
+            Jueves 27 de Enero 2022
           </div>
           <div className='text-orangeCustom text-4xl font-extrabold my-4'>
             Horario
