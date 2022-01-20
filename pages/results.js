@@ -1,6 +1,7 @@
 import React, { useState, useEffect }  from 'react';
 import { collection, doc, getDocs } from "firebase/firestore";
 import db from '../firebase/firebaseConfig';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 const Results = () => {
   
@@ -23,17 +24,34 @@ const Results = () => {
     <div className="max-w-7xl mx-auto pb-10">
       <img src="./logo.png" width="600px" className='my-5 m-auto'/>
         <img src="./logo-reto.png" width="300px" className='my-5 m-auto'/>
-      {students.map(s => (
-      <div className='grid grid-cols-1 sm:grid-cols-2 border-2 mb-4 sm:mb-0'>
-        <div className='flex'>
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-greenCustom" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
-          </svg>
-          <div className='ml-2 font-bold'>Nombre: <span className='font-normal'>{s.valores.nombre}</span> </div>
-        </div>
-        <div className='ml-2 font-bold'>Correo: <span className='font-normal'>{s.valores.correo}</span></div>
+      
+      <div className='m-auto text-center'>
+        <ReactHTMLTableToExcel
+          id="test-table-xls-button"
+          className="table-auto max-w-7xl mx-auto bg-greenCustom p-3 text-white font-bold rounded-lg"
+          table="table-to-xls"
+          filename="tablexls"
+          sheet="tablexls"
+          buttonText="Descargar"/>
       </div>
-      ))}
+       
+       <table id="table-to-xls" class="table-auto max-w-7xl mx-auto pb-10 mt-8">
+        <thead>
+          <tr>
+            <th className='font-bold text-2xl bg-redConsufarma p-2 text-white'>Nombre</th>
+            <th className='font-bold text-2xl bg-redConsufarma p-2 text-white'>Correo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {students.map(s => (
+          <tr className='border-2 text-center'>
+            <td className='border-2 p-2'>{s.valores.nombre}</td>
+            <td className='border-2 p-2'>{s.valores.correo}</td>
+          </tr>
+          ))}
+          
+        </tbody>
+      </table>
     </div>
   )
 };
