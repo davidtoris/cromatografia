@@ -7,6 +7,8 @@ import db from '../firebase/firebaseConfig';
 export default function Home() {
   const router = useRouter();
 
+  const date = new Date();
+  const fecha = date.toLocaleDateString() + ' ' + date.getHours() + ':' + date.getMinutes();
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-grayCustom">
       <Head>
@@ -43,6 +45,7 @@ export default function Home() {
               initialValues={{
                 nombre: '',
                 correo: '',
+                fecha
               }}
               validate={(valores) => {
                 const errores = {};

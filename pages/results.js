@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import { collection, doc, getDocs } from "firebase/firestore";
+import { collection, doc, getDocs, orderBy } from "firebase/firestore";
 import db from '../firebase/firebaseConfig';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
@@ -12,7 +12,7 @@ const Results = () => {
   useEffect(() => {
     let arregloStudents = [];
     const studentsFirebase = async () => {
-      const querySnapshot = await getDocs(collection(db, 'cromatografia'));
+      const querySnapshot = await getDocs(collection(db, 'cromatografia'), orderBy("fecha", "asc"));
       setStudents(querySnapshot.docs.map((d) => ({...d.data(), id: doc.id }) ))
     };
 
@@ -38,6 +38,7 @@ const Results = () => {
        <table id="table-to-xls" class="table-auto max-w-7xl mx-auto pb-10 mt-8">
         <thead>
           <tr>
+            <th className='font-bold text-2xl bg-redConsufarma p-2 text-white'>Fecha</th>
             <th className='font-bold text-2xl bg-redConsufarma p-2 text-white'>Nombre</th>
             <th className='font-bold text-2xl bg-redConsufarma p-2 text-white'>Correo</th>
           </tr>
@@ -45,6 +46,7 @@ const Results = () => {
         <tbody>
           {students.map(s => (
           <tr className='border-2 text-center'>
+            <td className='border-2 p-2'>{s.valores.fecha}</td>
             <td className='border-2 p-2'>{s.valores.nombre}</td>
             <td className='border-2 p-2'>{s.valores.correo}</td>
           </tr>
