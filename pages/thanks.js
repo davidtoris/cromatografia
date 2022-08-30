@@ -7,7 +7,7 @@ export default function Thanks() {
       
       <body className='bg-white'>
         <img src="./logo.png" width="600px" className='my-5 m-auto'/>
-        <img src="./logo-reto.png" width="300px" className='my-5 m-auto'/>
+        <img src="./logo-reto2.png" width="300px" className='my-5 m-auto'/>
         <div className='text-center'>
           <div className='text-redConsufarma p-3 text-5xl font-extrabold'>
             ¡Gracias por tu registro!
@@ -18,15 +18,16 @@ export default function Thanks() {
           <div className='bg-redConsufarma p-3 h-3'>
           </div>
           <div className='bg-blueConsufarma p-3 text-white text-4xl font-extrabold'>
-            Jueves 27 de Enero 2022
+            Jueves 8 de Septiembre 2022
           </div>
           <div className='text-orangeCustom text-4xl font-extrabold my-4'>
             Horario
           </div>
           <div className='text-gray-500 text-2xl font-italic my-4'>
-            Ciudad México- 10 h <br></br>
-            Bogotá - 11h <br></br>
-            Buenos Aires - 13h          
+            Ciudad México y Colombia- 10 h <br></br>
+            Guatemala - 9h <br></br>
+            Argenitna - 12h <br></br>
+            Chile - 11h <br></br>   
           </div>
           
           
