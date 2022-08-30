@@ -60,7 +60,7 @@ export default function Home() {
               }}
               onSubmit={async (valores) =>  {
                 // Add a new document with a generated id.
-                await addDoc(collection(db, "cromatografia"), {
+                await addDoc(collection(db, "validacion"), {
                   valores
                 });
                 router.push('/thanks')
