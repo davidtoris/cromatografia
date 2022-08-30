@@ -12,7 +12,7 @@ const Results = () => {
   useEffect(() => {
     let arregloStudents = [];
     const studentsFirebase = async () => {
-      const querySnapshot = await getDocs(collection(db, 'cromatografia'), orderBy("fecha", "asc"));
+      const querySnapshot = await getDocs(collection(db, 'validacion'), orderBy("fecha", "asc"));
       setStudents(querySnapshot.docs.map((d) => ({...d.data(), id: doc.id }) ))
     };
 
@@ -23,7 +23,7 @@ const Results = () => {
   return (
     <div className="max-w-7xl mx-auto pb-10">
       <img src="./logo.png" width="600px" className='my-5 m-auto'/>
-        <img src="./logo-reto.png" width="300px" className='my-5 m-auto'/>
+        <img src="./logo-reto2.png" width="300px" className='my-5 m-auto'/>
       
       <div className='m-auto text-center'>
         <ReactHTMLTableToExcel
