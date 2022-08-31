@@ -21,8 +21,8 @@ export default function Home() {
         {/* <img src="./logo.png" width="600px" className='my-5'/> */}
         <img src="./banner2.png" width="600px"/>
         <div className='text-center'>
-          <div className='bg-redConsufarma p-3 h-3'>
-          </div>
+          {/* <div className='bg-redConsufarma p-3 h-3'>
+          </div> */}
           {/* <div className='bg-blueConsufarma p-3 text-white text-4xl font-extrabold'>
             Jueves 8 de Septiembre 2022
           </div>
