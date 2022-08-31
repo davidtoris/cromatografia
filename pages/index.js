@@ -23,7 +23,7 @@ export default function Home() {
         <div className='text-center'>
           <div className='bg-redConsufarma p-3 h-3'>
           </div>
-          <div className='bg-blueConsufarma p-3 text-white text-4xl font-extrabold'>
+          {/* <div className='bg-blueConsufarma p-3 text-white text-4xl font-extrabold'>
             Jueves 8 de Septiembre 2022
           </div>
           <div className='text-orangeCustom text-4xl font-extrabold my-4'>
@@ -34,7 +34,7 @@ export default function Home() {
             Guatemala - 9h <br></br>
             Argenitna - 12h <br></br>
             Chile - 11h <br></br>
-          </div>
+          </div> */}
           <div className='text-orangeCustom text-3xl font-bold mt-4'>
             Participa por una Promoción Especial
           </div>
