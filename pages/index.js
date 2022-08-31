@@ -18,7 +18,7 @@ export default function Home() {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
       </Head>
       <div className='bg-grayCustom'>
-        <img src="./logo.png" width="600px" className='my-5'/>
+        {/* <img src="./logo.png" width="600px" className='my-5'/> */}
         <img src="./banner2.png" width="600px"/>
         <div className='text-center'>
           <div className='bg-redConsufarma p-3 h-3'>
@@ -35,12 +35,12 @@ export default function Home() {
             Argenitna - 12h <br></br>
             Chile - 11h <br></br>
           </div> */}
-          <div className='text-orangeCustom text-3xl font-bold mt-4'>
+          {/* <div className='text-orangeCustom text-3xl font-bold mt-4'>
             Participa por una Promoción Especial
           </div>
           <div className='text-gray-600 text-2xl font-bold mb-4'>
             Duración aproximada 40 min.
-          </div>
+          </div> */}
 
           <Formik
               initialValues={{
