@@ -68,7 +68,7 @@ export default function Home() {
               {({ errors }) => (
 
                 <Form>
-                  <div className='text-left text-blue-900 font-bold text-lg ml-2'>Nombre:</div>  
+                  <div className='text-left text-blue-900 font-bold text-lg ml-2 mt-2'>Nombre:</div>  
                   <div className="mb-3">
                     <Field type="text" 
                     className="form-control" 
